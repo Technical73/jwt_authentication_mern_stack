@@ -1,0 +1,135 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(80, 9, 137);
+}
+
+/* global_form_styles styles start */
+
+.global_form_styles {
+  width: 30%;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 0px 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+.global_form_styles_siginIn {
+  width: 30%;
+  min-height: 390px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 0px 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+.global_form_header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.global_form_header h2 {
+  font-size: 24px;
+  font-weight: 900;
+}
+.global_form_input_container {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+.global_form_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.global_form_input input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid gray;
+  padding: 5px;
+}
+.global_form_input input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+.global_form_input input:focus {
+  outline: none;
+  border: 2px solid slateblue;
+}
+.global_form_input_container button {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(124, 66, 226);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  box-shadow: 0px 0px 0px 0px black;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s linear, box-shadow 0.3s linear;
+}
+
+.global_form_input_container button:hover {
+  cursor: pointer;
+  background-color: rgb(60, 46, 137);
+}
+
+.forgot_password_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(124, 66, 226);
+  font-size: 14px;
+  font-weight: 600;
+}
+.forgot_anchor_tag {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .global_form_styles {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .global_form_styles {
+    width: 50%;
+  }
+}
+/* global_form_styles styles end */

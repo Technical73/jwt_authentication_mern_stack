@@ -37,6 +37,17 @@ const SignUp_Form = () => {
           {/* signUp button ends */}
         </div>
         {/* inputs ends */}
+
+        {/* Navigate to sigin in starts */}
+        <span className="forgot_password_button">
+          Already have an account?{"  "}
+          <a href="#" className="forgot_anchor_tag">
+            {" "}
+            Sign in
+          </a>
+        </span>
+
+        {/* Navigate to signin in ends */}
       </form>
       {/*  form ends */}
     </>

@@ -32,7 +32,7 @@ const SignIn_Form = () => {
         {/* inputs ends */}
         {/* Navigate to siginUp starts */}
         <span className="forgot_password_button">
-          Already have an account?{"  "}
+          Don't you havve an account?{"  "}
           <a href="#" className="forgot_anchor_tag">
             {" "}
             Sign up

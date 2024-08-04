@@ -1,8 +1,21 @@
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import SignUpSchema from "../validations/signup_form_validation";
 const SignUp_Form = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(SignUpSchema), mode: "onChange" });
+  let onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
   return (
     <>
       {/* form  starts */}
-      <form className="global_form_styles">
+      <form className="global_form_styles" onSubmit={handleSubmit(onSubmit)}>
         {/* header starts*/}
         <div className="global_form_header">
           <h2>Sign up</h2>
@@ -12,23 +25,66 @@ const SignUp_Form = () => {
         <div className="global_form_input_container">
           {/* username field*/}
           <div className="global_form_input">
-            <input type="text" name="username" placeholder="Username" />
+            <input
+              type="text"
+              {...register("username")}
+              placeholder="Username"
+            />
+            {errors.username ? (
+              <span className="validation_errors_style">
+                {errors.username.message}
+              </span>
+            ) : (
+              <span className="validation_default_errors">hello</span>
+            )}
           </div>
           {/* email id field */}
           <div className="global_form_input">
-            <input type="email" name="email_id" placeholder="E-mail" />
+            <input
+              type="email"
+              {...register("email_id")}
+              placeholder="E-mail"
+            />
+
+            {errors.email_id ? (
+              <span className="validation_errors_style">
+                {errors.email_id.message}
+              </span>
+            ) : (
+              <span className="validation_default_errors">hello</span>
+            )}
           </div>
           {/* password field */}
           <div className="global_form_input">
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              {...register("password")}
+              placeholder="Password"
+            />
+
+            {errors.password ? (
+              <span className="validation_errors_style">
+                {errors.password.message}
+              </span>
+            ) : (
+              <span className="validation_default_errors">hello</span>
+            )}
           </div>
           {/* confirm password field */}
           <div className="global_form_input">
             <input
               type="password"
-              name="confirm_password"
+              {...register("confirmPassword")}
               placeholder="Confirm Password"
             />
+
+            {errors.confirmPassword ? (
+              <span className="validation_errors_style">
+                {errors.confirmPassword.message}
+              </span>
+            ) : (
+              <span className="validation_default_errors">hello</span>
+            )}
           </div>
           {/* signUp button starts */}
           <button type="submit" className="global_form_input_button">

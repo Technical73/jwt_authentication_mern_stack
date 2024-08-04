@@ -16,7 +16,7 @@
 
 .global_form_styles {
   width: 30%;
-  min-height: 430px;
+  height: 500px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   padding: 0px 13px;
@@ -55,7 +55,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 24px;
+  gap: 20px;
 }
 .global_form_input {
   display: flex;
@@ -120,7 +120,19 @@
   font-weight: 600;
   text-decoration: none;
 }
+.validation_errors_style {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  font-weight: 500;
+}
+.validation_default_errors {
+  color: white;
+  font-size: 12px;
 
+  margin-top: 2px;
+  font-weight: 500;
+}
 @media screen and (max-width: 768px) {
   .global_form_styles {
     width: 90%;

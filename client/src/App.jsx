@@ -4,8 +4,8 @@ function App() {
   return (
     <>
       <div className="container">
-        <SignUp_Form />
-        {/* <SigIn_Form /> */}
+        {/* <SignUp_Form /> */}
+        <SigIn_Form />
       </div>
     </>
   );
